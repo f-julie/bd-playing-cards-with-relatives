@@ -1,6 +1,8 @@
 package com.frank;
 
-public class PlayingCard {
+// Abstract means it contains an abstract method and/or is not meant to be instantiated - just meant to be a superclass
+// A generic PlayingCard cannot exist in this application - remember mammal example - you cannot have a generic mammal
+public abstract class PlayingCard {
 	
 	private int value;    
 	private String color;    
@@ -78,6 +80,7 @@ public class PlayingCard {
 	}
 
 // super class is required to have any method where Polymorphism might be used - even if it doesn't need it
-public void showCard() {} // required for Polymorphism to work - even though it does nothing - we will address this tomorrow!
+//public void showCard() {} // required for Polymorphism to work - even though it does nothing - we will address this tomorrow!
+public abstract void showCard(); // Making this an abstract method indicates that any subclass must define it
 
 } // End of PlayingCard class
